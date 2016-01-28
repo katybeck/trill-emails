@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Your Message Subject or Title</title>
+	<style type="text/css">
+		/* Based on The MailChimp Reset INLINE: Yes. */  
+		/* Client-specific Styles */
+		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+		/* End reset */
+
+		/* Some sensible defaults for images
+		Bring inline: Yes. */
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+		a img {border:none;} 
+		.image_fix {display:block;}
+
+		/* Yahoo paragraph fix
+		Bring inline: Yes. */
+		p {margin: 1em 0;}
+
+
+
+		/* Hotmail header color reset
+		Bring inline: Yes. */
+		h1, h2, h3, h4, h5, h6 {color: #555555 !important; text-align: center;}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: orange !important;}
+
+		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+		color: red !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+		color: gray !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		/* Outlook 07, 10 Padding issue fix
+		Bring inline: No.*/
+		table td {border-collapse: collapse; font-family: Verdana, Tahoma, Arial, sans-serif; color: gray;}
+		table td.text {
+			padding: 20px 20px;
+		}
+
+		table td.curator-portrait {
+			width: 40%;
+			/*background: #f3f3f3;*/
+			vertical-align: top;
+			font-size: 13px;
+			line-height: 15px;
+			font-weight: normal;
+			font-family: Georgia, serif;
+			color: orange;
+			padding: 0 20px 0 5px;
+		}
+
+		table td.curator-portrait img {
+			width: 97%;
+			border: 4px solid orange;
+			margin-bottom: 10px;
+			max-width: 200px;
+		}
+
+		table td.curated-package {
+			vertical-align: top;
+			padding-right: 5px;
+		}
+
+		
+
+		/* Remove spacing around Outlook 07, 10 tables
+		Bring inline: Yes */
+		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;}
+
+		table.section {
+			width: 100%;
+			max-width: 600px;
+			margin: 10px auto;
+			/*background: #f9f9f9;*/
+		}
+
+		table.section tr.header { text-align: center; }
+		table.section tr.header h4,
+		table.section tr.header h5 {
+			margin: 0;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 18px;
+			color: orange !important;
+			padding: 25px 0 20px 0;
+			display: inline-block;
+			font-family: Georgia, serif;
+			font-style: italic
+
+		}
+		table.section tr.header h5 {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-family: Verdana, Tahoma, Arial, sans-serif;
+			font-style: normal;
+		}
+
+		table.section.package { margin: 0;}
+
+		table.section.package td { vertical-align:top; background: #f9f9f9; padding: 10px; color: gray;}
+
+		table.section.package td.spacer {
+			padding: 0;
+			background: transparent; height: 5px;
+		}
+
+		table.section.package td h3,
+		table.section.package td h4,
+		table.section.package td h5,
+		table.section.package td h6 {
+			font-weight: normal;
+			text-align: left;
+			font-size: 12px;
+			line-height: 14px;
+			margin: 0;
+		}
+
+		table.section.package td h3 {font-weight: bold;}
+		table.section.package td h4 { font-style: italic; margin-bottom: 5px;}
+
+		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+		Bring inline: Yes. */
+		a {color: orange;}
+
+
+		/***************************************************
+		****************************************************
+		MOBILE TARGETING
+		****************************************************
+		***************************************************/
+		@media only screen and (max-device-width: 480px) {
+			/* Part one of controlling phone number linking for mobile. */
+			a[href^="tel"], a[href^="sms"] {
+						text-decoration: none;
+						color: blue; /* or whatever your want */
+						pointer-events: none;
+						cursor: default;
+					}
+
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+						text-decoration: default;
+						color: orange !important;
+						pointer-events: auto;
+						cursor: default;
+					}
+
+		}
+
+		/* More Specific Targeting */
+
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		/* You guessed it, ipad (tablets, smaller screens, etc) */
+			/* repeating for the ipad */
+			a[href^="tel"], a[href^="sms"] {
+						text-decoration: none;
+						color: blue; /* or whatever your want */
+						pointer-events: none;
+						cursor: default;
+					}
+
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+						text-decoration: default;
+						color: orange !important;
+						pointer-events: auto;
+						cursor: default;
+					}
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		/* Put your iPhone 4g styles in here */ 
+		}
+
+		/* Android targeting */
+		@media only screen and (-webkit-device-pixel-ratio:.75){
+		/* Put CSS for low density (ldpi) Android layouts in here */
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1){
+		/* Put CSS for medium density (mdpi) Android layouts in here */
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1.5){
+		/* Put CSS for high density (hdpi) Android layouts in here */
+		}
+		/* end Android targeting */
+
+	</style>
+
+	<!-- Targeting Windows Mobile -->
+	<!--[if IEMobile 7]>
+	<style type="text/css">
+	
+	</style>
+	<![endif]-->   
+
+	<!-- ***********************************************
+	****************************************************
+	END MOBILE TARGETING
+	****************************************************
+	************************************************ -->
+
+	<!--[if gte mso 9]>
+		<style>
+		/* Target Outlook 2007 and 2010 */
+		</style>
+	<![endif]-->
+</head>
+<body>
+<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+	<tr>
+		<td valign="top"> 
+		<!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
+		<p style="background-color: #ffffcf;text-align:center;font-size:11px;padding: 10px">Email not displaying correctly?<a href="[weblink]" style="color:#002aff;">View it</a> in your browser</p>
+
+		<table class="section">
+			<tr>
+				<td valign="top" align="center" colspan="2">
+					<img style="width: 100%; max-width: 200px" src="http://assets.trill.me/wp-content/uploads/2014/07/blog-logo3.png" />
+				</td>
+			</tr>
+			<tr>
+				<td class="text" colspan="2">
+					This week at Trill we are introducing curated recommendations. We'll be sending a weekly collection of events brought to you by curators in three really interesting Boston scenes: comedy, classical, and avant-garde music. Keep an eye out as we introduce new curators in theater, dance and other musical genres in the coming weeks!
+				</td>
+			</tr>
+		</table>
+		<table class="section">
+			<tr class="header"><td colspan="2">
+				<h5>Comedy</h5>
+				<h4>Mary Largenton</h4>
+			</td></tr>
+			<tr>
+				<td class="curator-portrait">
+					<!-- <img src="https://trill-static.s3.amazonaws.com/image/photo_4-2.JPG?Signature=ohaHYedQHVDiaLO512Wl3hW2Z2Y%3D&Expires=1407255053&AWSAccessKeyId=AKIAIPK67IBUA6IILRGA" /> -->
+					<img src="http://assets.trill.me/wp-content/uploads/2014/08/photo-3-3-150x150.jpg" />
+					Mary is heartbreaker, dream maker, and love taker. She is also an active improviser who has been immersed in the Boston comedy scene since 2011. Currently, Mary is living out every little girl's dream planning private events for Improv Asylum & Laugh Boston. When not moonlighting as Pat Benatar, you can catch Mary performing at Improv Boston's Harold Night, Improv Asylum's House Teams, and on various indie improv teams around the city. For complaints about the MBTA and pictures of other people's pets follow Mary on Twitter & Instagram @marymeplease.
+				</td>
+				<td class="curated-package">
+					<table class="section package">
+						<tr>
+							<td>
+								<h3>Brian Posehn</h3>
+								<h4>August 7&ndash;9, Laugh Boston</h4>
+								<h6>You probably don't recognize him by name but you've been watching Brian Posehn for years… and you're probably already huge fan! Brian has been killing it in guest starring roles on TV and in movies since the 90s and has been rocking his nerdy persona in the stand-up world at the same time. Brian, who is also the writer/creator of Deadpool, is headlining Laugh Boston’s Comic-con themed weekend.</h6>
+							</td>
+						</tr>
+						<tr><td class="spacer"></td></tr>
+						<tr>
+							<td>
+								<h3>Harold Night: Top Shelf</h3>
+								<h4>Aug 6&ndash;27, Improv Boston</h4>
+								<h6>For the comedy lover -- This classic improv format is not only incredibly impressive but also absolutely hysterical! Go to the shows this week and support all the teams as they make their big debut to Wednesday nights. Plus our ticket to the 7:30 gets you into the 9:30pm for free! </h6>
+							</td>
+						</tr>
+						<tr><td class="spacer"></td></tr>
+						<tr>
+							<td>
+								<h3>Awkward Compliment</h3>
+								<h4>Thursdays, Somerville Theater</h4>
+								<h6>Best bang for your buck in Boston! Well, OK, Somerville technically. Each week the indie improv troupe, Awkward Compliment, hosts a variety show of local stand-ups and other improv troupes from the Greater Boston area. Its only $5 and it all happens at the Somerville Theater which is basically the heart of Davis Square.  </h6>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+		<table class="section">
+			<tr class="header"><td colspan="2">
+				<h4>Sarah Darling</h4>
+				<h5>Classical</h5>
+			</td></tr>
+			<tr>
+				<td class="curator-portrait">
+					<!-- <img src="https://trill-static.s3.amazonaws.com/image/photo_3-3.JPG?Signature=kNMQAlpyRFJaLnP7CMEhPmYcHL4%3D&Expires=1407255001&AWSAccessKeyId=AKIAIPK67IBUA6IILRGA" /> -->
+					<img src="http://assets.trill.me/wp-content/uploads/2014/08/photo-1-5-150x150.jpg" />
+					“Focused, nuanced, and arresting” (Boston Musical Intelligencer), Sarah holds a variety of leading roles on viola and violin in ensembles all over Boston. Performing with Boston Baroque, Musicians of the Old Post Road, the Harvard Baroque Chamber Orchestra, Emmanuel Music, Gut Reaction, Les Bostonades, Musical Offering, A Far Cry, and Boston Early Music Festival, she knows everyone and everything in the Boston classical music scene. She has recorded old and new music for Naxos, Linn, Paladino, Azica, MSR, and Centaur Records. She is a Harvard alum and is currently finishing a doctorate at the New England Conservatory. For a list of upcoming musical adventures, visit [www.sarahdarling.net](http://www.sarahdarling.net/).
+				</td>
+				<td class="curated-package">
+					
+					<table class="section package">
+						<tr>
+							<td>
+							<h3>Boston Lyric Opera</h3>
+							<h4>August 6 — Hatch Shell</h4>
+							<h6>Classic opera at the Hatch Shell? It doesn't get more Boston-in-the-summertime than this. Kick back, relax, and get ready to tear up in all the right places as the world-class artists of the Boston Lyric Opera light up the stage. </h6>
+						</td>
+					</tr>
+					<tr><td class="spacer"></td></tr>
+					<tr>
+						<td>
+							<h3>Arceci</h3>
+							<h4>August 8</h4>
+							<h6>Recipe for an utterly delightful evening: Taylor House,Jamaica Plain's elegant, music-friendly B+B, hosts a distinguished group of Boston's early musicians playing the sensuous music of the French Baroque.</h6>
+						</td>
+					</tr>
+					<tr><td class="spacer"></td></tr>
+					<tr>
+						<td>
+							<h3>Boston Opera Collaborative</h3>
+							<h4>August 10</h4>
+							<h6>In recent years, the Boston Opera Collaborative has been taking off like a 	rocket, embracing an impressive variety of cutting-edge projects. Chances are that even this relaxed show in one of Boston's beautiful Emerald Necklace parks will include some off-the-beaten-path surprises!</h6>
+						</td>
+					</tr>
+					<tr><td class="spacer"></td></tr>
+					<tr>
+						<td>
+							<h3>A Far Cry</h3>
+							<h4>September 6 — St. John's Church</h4>
+							<h6>A Far Cry, Boston's conductorless chamber orchestra, kicks off the classical season with a Labor Day week concert featuring Tchaikovsky's magnificent, passionate, gorgeous, no-holds-barred Serenade.</h6>
+						</td>
+					</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+
+		<table class="section">
+			<tr class="header"><td colspan="2">
+				<h5>Avant-Garde Music</h5>	
+				<h4>Mali Sastri</h4>
+			</td></tr>
+			<tr>
+				<td class="curator-portrait">
+					<!-- <img src="https://trill-static.s3.amazonaws.com/image/photo-5.JPG?Signature=fVZamuS9hiLVUAiLparLRnBTyrQ%3D&Expires=1407255143&AWSAccessKeyId=AKIAIPK67IBUA6IILRGA" /> -->
+					<img src="http://assets.trill.me/wp-content/uploads/2014/08/photo-5-150x150.jpg" />
+					Singer Mali is a singer, songstress, multimedia events producer and all-around experimental arts lover hailing from Lexington, MA. After stints in London and New York, Mali settled at Cloud Club, an artists' co-op in Boston's South End, where she fronts the dark avant pop band, Jaggery [jaggery.org], and curates the performance series *Org*. Over the past 6.5 years, Mali has produced and curated thirty-five *Org*s, offering the stage to countless local-and-otherwise musicians, dancers, filmmakers, and storytellers. As a performer, Mali has toured nationally and internationally, yet whether on the road or at home in her cozy apartment, her Sagitarrius spirit always has her seeking the new, the different, and the weirdly beautiful.
+				</td>
+				<td class="curated-package">
+					
+				<table class="section package">
+					<tr>
+						<td>
+							<h3>Orchestra Morphine for 2 shows! A Salute to Mark Sandman - 15 Years Gone But Not Forgotten.</h3>
+							<h4>Wed, Aug 6th — Lizard Lounge, Cambridge</h4>
+							<h6>The two surviving members of Boston band Morphine, drummer Billy Conway and saxophonist Dana Colley, regroup with a nine-piece line-up of Boston musicians to pay tribute to Mark Sandman, who died onstage fifteen years ago at age 46. These shows are technically sold out, but I hear a couple tickets might be available at the door...</h6>
+						</td>
+					</tr>
+					<tr><td class="spacer"></td></tr>
+					<tr>
+						<td>
+							<h3>Club D'elf</h3>
+							<h4>Fri, Aug 8th — Lizard Lounge, Cambridge</h4>
+							<h6>Club D'elf, fronted by bassist Mike Rivard, creates a swirling, textured, trance-inducing aural elixir combining both acoustic and electronic, and elements of jazz, world, rock, and hip-hop. This long-standing, every-other-Friday-night-at-the-Lizard-Lounge residency showcases some of the Boston area's finest jazz musicians -- Berklee professors frequently drop-in as well as notables like John Medeski -- and the usually sold-out, cramped-quarters of the Lizard Lounge does not deter audience members from dancing between the tables.</h6>
+						</td>
+					</tr>
+					<tr><td class="spacer"></td></tr>
+					<tr>
+						<td>
+							<h3>Earthdance Music & Movement Jam</h3>
+							<h4>Sun, Aug 10th — Mobius, cambridge
+</h4>
+							<h6>This monthly music and movement jam at Mobius features multi-instrumentalist Jane Wang, who will be creating a "live soundscape for dancing". Wear comfortable clothing, bring an adventurous and open spirit, and, if you're a musician, an instrument for an improv jam after 10pm.</h6>
+						</td>
+					</tr>
+				</table>
+
+				</td>
+			</tr>
+		</table>
+
+		<!-- End example table -->
+
+		<table cellspacing="0" cellpadding="0" style="width:100%;max-width: 600px; margin: 20px auto; background-color:#f1f1f1; color: gray; font-size:11px;"><tr><td style="vertical-align: middle;font-size:11px;padding:10px;">To unsubscribe please click <a href="[unsubscribe]">here</a></td><td style="vertical-align: top;font-size:11px;padding: 20px">[%from_name%]<br>[%address%], [%city%], [%state%], [%zip%]</td></tr></table>
+
+		</td>
+	</tr>
+</table>  
+
+<!-- End of wrapper table -->
+</body>
+</html>
